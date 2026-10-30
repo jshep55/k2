@@ -89,7 +89,7 @@
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
     name: C.businessName,
-    description: "Golf lessons, TourPutt putting studio, TrackMan club fitting and open practice in La Mirada, CA with PGA Professional " + C.coachName + ".",
+    description: "Golf lessons, TourPutt putting studio, TrackMan club fitting and open practice in La Mirada, CA with PGA Professional " + C.coachFullName + ".",
     telephone: C.phoneDial,
     priceRange: "$$",
     address: {

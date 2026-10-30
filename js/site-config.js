@@ -11,7 +11,7 @@
 window.K2_CONFIG = {
   businessName: "K2 Golf Studio",
   coachName: "Kevin",
-  coachFullName: "Kevin [LAST_NAME]",
+  coachFullName: "Kevin Kim",
   coachTitle: "PGA Professional",
 
   // Website address once live, e.g. "https://k2golfstudio.com" (no trailing slash)
