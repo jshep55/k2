@@ -76,7 +76,7 @@ window.K2_CONFIG = {
   // Membership plans (shown on the homepage and Memberships page)
   memberships: [
     {
-      name: "Practice Membership",
+      name: "Swing Bay Membership",
       price: "$200",
       period: "/month",
       tagline: "Daily practice time in our hitting bays.",
