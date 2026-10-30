@@ -61,7 +61,7 @@ window.K2_CONFIG = {
       { name: "Junior Putting Lesson", price: "$200", note: "On the TourPutt green." }
     ],
     putting: [
-      { name: "TourPutt Pattern Test", price: "[PRICE]", note: "36 putts from 3, 5 and 7 feet, all the way around the hole." },
+      { name: "TourPutt Pattern Test", price: "Included", note: "Walk-in. Included with any lesson and with the Full Studio Membership." },
       { name: "Putting Lesson, 60 min", price: "$250", note: "Coaching with Kevin on the TourPutt green." },
       { name: "Junior Putting Lesson", price: "$200", note: "For golfers under 18." }
     ],
@@ -96,6 +96,7 @@ window.K2_CONFIG = {
       features: [
         "Full access to the studio, including the TourPutt putting green",
         "One hour of practice per day",
+        "Walk-in access to the TourPutt Pattern Test",
         "Member pricing on clubs, balls, gloves and more",
         "Complimentary fittings when you purchase new clubs",
         "Demo clubs from Titleist, Honma and Miura"
