@@ -250,6 +250,7 @@ p { margin: 0 0 1em; }
   border: 2px solid var(--gold); border-radius: var(--radius); z-index: 0;
 }
 .kevin__photo > * { position: relative; z-index: 1; }
+.photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); background: var(--sand); }
 .creds { list-style: none; padding: 0; margin: 24px 0 30px; display: grid; gap: 12px; }
 .creds li { display: flex; gap: 12px; align-items: flex-start; }
 .creds svg { flex: none; margin-top: 4px; color: var(--gold); }
