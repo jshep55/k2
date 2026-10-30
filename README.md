@@ -10,10 +10,13 @@ Anything in `[BRACKETS]` is a placeholder. To find what's left, search the proje
 
 | What | Where |
 |---|---|
-| Phone, email, hours, booking link, socials, membership prices | `js/site-config.js` |
+| Phone, email, hours, booking link, socials, all prices (lessons, putting, fitting, open practice, memberships) | `js/site-config.js` |
 | Page text, reviews, bio | each page's `.html` file |
 | Colors and fonts | top of `css/styles.css` (`:root`) |
 | Photos | put files in `images/`, then swap each `photo-ph` placeholder for an `<img>` (there's an example in the HTML comments) |
+
+## Pages
+`index.html` (Home), `about.html`, `lessons.html`, `putting.html` (TourPutt + Pattern Test), `fitting.html`, `memberships.html` (includes Open Practice), `contact.html`, and `thanks.html` (where visitors land after sending a form).
 
 ## SEO
 - Each page has its own `<title>` and meta description.

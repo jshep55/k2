@@ -71,6 +71,19 @@
     }).join("");
   });
 
+  // Price lists
+  document.querySelectorAll("[data-k2-prices]").forEach(function (el) {
+    var list = C.prices[el.getAttribute("data-k2-prices")] || [];
+    el.innerHTML = list.map(function (p) {
+      return (
+        '<div class="price-row">' +
+          "<div><h3>" + p.name + "</h3>" + (p.note ? "<p>" + p.note + "</p>" : "") + "</div>" +
+          '<span class="price-row__price">' + p.price + "</span>" +
+        "</div>"
+      );
+    }).join("");
+  });
+
   // Local business structured data for Google
   var schema = {
     "@context": "https://schema.org",

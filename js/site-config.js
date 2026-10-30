@@ -51,6 +51,32 @@ window.K2_CONFIG = {
     youtube: "[YOUTUBE_URL]"
   },
 
+  // Prices for single services (shown on the Lessons, Putting, Fitting and Memberships pages)
+  prices: {
+    lessons: [
+      { name: "Private Lesson, 60 min", price: "[PRICE]", note: "One-on-one with Kevin. TrackMan data and video included." },
+      { name: "Private Lesson, 30 min", price: "[PRICE]", note: "A focused tune-up on one part of your game." },
+      { name: "Junior Lesson, 60 min", price: "[PRICE]", note: "For players ages [#]–17. Parents welcome to watch." },
+      { name: "Lesson Package, 5 × 60 min", price: "[PRICE]", note: "Save [PLACEHOLDER: amount] versus single lessons." },
+      { name: "Playing Lesson", price: "[PRICE]", note: "On-course coaching: strategy, decisions and scoring. [PLACEHOLDER: course / holes]" }
+    ],
+    putting: [
+      { name: "TourPutt Pattern Test", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 30 min]. Full read, start-line and speed report." },
+      { name: "Putting Lesson, 60 min", price: "[PRICE]", note: "Coaching with Kevin on the TourPutt green." }
+    ],
+    fitting: [
+      { name: "Full Bag Fitting", price: "[PRICE]", note: "Driver through putter. [PLACEHOLDER: length, e.g. 2.5 hrs]" },
+      { name: "Driver & Woods Fitting", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 60 min]" },
+      { name: "Iron Fitting", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 60 min]" },
+      { name: "Wedge Fitting", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 45 min]" },
+      { name: "Putter Fitting", price: "[PRICE]", note: "Fit on the TourPutt green. [PLACEHOLDER: length]" }
+    ],
+    openPractice: [
+      { name: "TourPutt Green Drop-In", price: "[PRICE]", note: "Per [PLACEHOLDER: hour / session]" },
+      { name: "Impact Vision Simulator Drop-In", price: "[PRICE]", note: "Per [PLACEHOLDER: hour / session]" }
+    ]
+  },
+
   // Membership plans (shown on the homepage and Memberships page)
   memberships: [
     {
