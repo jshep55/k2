@@ -91,7 +91,10 @@
     employee: { "@type": "Person", name: C.coachFullName.replace(/\s*\[.*\]/, ""), jobTitle: C.coachTitle },
     hasMap: a.mapsLink
   };
-  if (!isPlaceholder(C.siteUrl)) schema.url = C.siteUrl;
+  if (!isPlaceholder(C.siteUrl)) {
+    schema.url = C.siteUrl;
+    schema.logo = schema.image = C.siteUrl + "/images/apple-touch-icon.png";
+  }
   if (!isPlaceholder(C.email)) schema.email = C.email;
   if (C.hoursForGoogle.length) schema.openingHours = C.hoursForGoogle;
   var sameAs = Object.keys(C.social).map(function (k) { return C.social[k]; }).filter(function (u) { return !isPlaceholder(u); });
