@@ -20,7 +20,6 @@
     year: String(new Date().getFullYear())
   };
   var links = {
-    booking: C.bookingLink,
     tel: "tel:" + C.phoneDial,
     email: "mailto:" + C.email,
     maps: a.mapsLink,
@@ -55,20 +54,27 @@
 
   // Membership cards
   document.querySelectorAll("[data-k2-plans]").forEach(function (el) {
+    el.classList.add("plans--" + C.memberships.length);
     el.innerHTML = C.memberships.map(function (p) {
       return (
         '<article class="plan' + (p.featured ? " plan--featured" : "") + '">' +
-          (p.featured ? '<span class="plan__badge">Most Popular</span>' : "") +
+          (p.badge ? '<span class="plan__badge">' + p.badge + "</span>" : "") +
           '<h3 class="plan__name">' + p.name + "</h3>" +
           '<p class="plan__tagline">' + p.tagline + "</p>" +
           '<p class="plan__price"><span>' + p.price + "</span>" + p.period + "</p>" +
           '<ul class="plan__features">' +
             p.features.map(function (f) { return "<li>" + f + "</li>"; }).join("") +
           "</ul>" +
-          '<a class="btn ' + (p.featured ? "btn--gold" : "btn--outline-dark") + '" href="' + C.bookingLink + '">Get Started</a>' +
+          '<a class="btn ' + (p.featured ? "btn--gold" : "btn--outline-dark") + '" href="tel:' + C.phoneDial + '">Call to Join</a>' +
         "</article>"
       );
     }).join("");
+  });
+
+  // Plan prices shown outside the plan cards (e.g. comparison table)
+  document.querySelectorAll("[data-k2-plan-price]").forEach(function (el) {
+    var p = C.memberships[+el.getAttribute("data-k2-plan-price")];
+    if (p) el.textContent = p.price;
   });
 
   // Price lists
@@ -89,7 +95,7 @@
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
     name: C.businessName,
-    description: "Golf lessons, TourPutt putting studio, TrackMan club fitting and open practice in La Mirada, CA with PGA Professional " + C.coachFullName + ".",
+    description: "Golf lessons, TourPutt putting studio, TrackMan club fitting and practice memberships in La Mirada, CA with former PGA TOUR player and PGA Professional " + C.coachFullName + ".",
     telephone: C.phoneDial,
     priceRange: "$$",
     address: {

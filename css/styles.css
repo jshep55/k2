@@ -296,6 +296,9 @@ p { margin: 0 0 1em; }
 /* ---------- Plans ---------- */
 .plans { display: grid; gap: 22px; align-items: stretch; }
 @media (min-width: 900px) { .plans { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 760px) { .plans--2 { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin: 0 auto; } }
+.price-group + .price-group { margin-top: 28px; }
+.price-group h3.price-group__title { font-size: 1.15rem; margin: 0 0 12px; }
 .plan {
   position: relative;
   display: flex; flex-direction: column;
@@ -512,6 +515,16 @@ p { margin: 0 0 1em; }
   background: var(--gold-tint); border-left: 3px solid var(--gold);
   padding: 14px 18px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-size: .95rem; margin: 0 0 24px;
 }
+
+/* Compare table */
+.compare-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+.compare { width: 100%; border-collapse: collapse; min-width: 520px; }
+.compare th, .compare td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: .97rem; }
+.compare thead th { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-dark); font-weight: 600; }
+.compare tbody th { font-weight: 500; }
+.compare td { white-space: nowrap; }
+.compare tr:last-child th, .compare tr:last-child td { border-bottom: 0; }
+.compare__price th, .compare__price td { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
 
 /* Contact */
 .contact-grid { display: grid; gap: 32px; }

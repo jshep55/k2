@@ -4,19 +4,19 @@ A static site (plain HTML/CSS with a little JavaScript) for K2 Golf Studio in La
 
 ## Editing business info
 
-**All business info lives in `js/site-config.js`.** That covers the phone number, email, hours, booking link, social links, Google reviews link and membership prices. Change it there once and every page updates.
+**All business info lives in `js/site-config.js`.** That covers the phone number, email, hours, social links, Google reviews link and all prices. Change it there once and every page updates.
 
 Anything in `[BRACKETS]` is a placeholder. To find what's left, search the project for `[`.
 
 | What | Where |
 |---|---|
-| Phone, email, hours, booking link, socials, all prices (lessons, putting, fitting, open practice, memberships) | `js/site-config.js` |
+| Phone, email, hours, socials, all prices (lessons, putting, fitting, memberships) | `js/site-config.js` |
 | Page text, reviews, bio | each page's `.html` file |
 | Colors and fonts | top of `css/styles.css` (`:root`) |
 | Photos | put files in `images/`, then swap each `photo-ph` placeholder for an `<img>` (there's an example in the HTML comments) |
 
 ## Pages
-`index.html` (Home), `about.html`, `lessons.html`, `putting.html` (TourPutt + Pattern Test), `fitting.html`, `memberships.html` (includes Open Practice), `contact.html`, and `thanks.html` (where visitors land after sending a form).
+`index.html` (Home), `about.html`, `lessons.html`, `putting.html` (TourPutt + Pattern Test), `fitting.html`, `memberships.html` (two plans + comparison table), `contact.html`, and `thanks.html` (where visitors land after sending a form).
 
 ## SEO
 - Each page has its own `<title>` and meta description.

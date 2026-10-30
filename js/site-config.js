@@ -2,7 +2,7 @@
    K2 GOLF STUDIO — SITE SETTINGS
    --------------------------------------------------------------------------
    This is the ONE place to update business info. Every page reads from here:
-   phone, email, hours, booking link, social links, and membership prices.
+   phone, email, hours, social links, and all prices.
 
    Anything still in [BRACKETS] is a placeholder that needs real info.
    Tip: search the whole project for "[" to find every remaining placeholder.
@@ -19,7 +19,7 @@ window.K2_CONFIG = {
 
   phone: "657-255-4036",          // shown on the site
   phoneDial: "+16572554036",      // used for tap-to-call links
-  email: "[EMAIL]",
+  email: "k2golfstudio2@yahoo.com",
 
   address: {
     street: "14774 Beach Blvd",
@@ -39,9 +39,6 @@ window.K2_CONFIG = {
   // Same hours in Google's format, for search results. Example: "Mo-Fr 09:00-19:00", "Sa 08:00-16:00"
   hoursForGoogle: [],
 
-  // Where every "Book a Lesson" / "Book a Fitting" button goes (Square, etc.)
-  bookingLink: "[BOOKING_LINK]",
-
   // Link to your Google reviews page
   googleReviewsLink: "[GOOGLE_REVIEWS_LINK]",
 
@@ -51,72 +48,58 @@ window.K2_CONFIG = {
     youtube: "[YOUTUBE_URL]"
   },
 
-  // Prices for single services (shown on the Lessons, Putting, Fitting and Memberships pages)
+  // Prices (shown on the Lessons, Putting Studio and Club Fitting pages)
   prices: {
-    lessons: [
-      { name: "Private Lesson, 60 min", price: "[PRICE]", note: "One-on-one with Kevin. TrackMan data and video included." },
-      { name: "Private Lesson, 30 min", price: "[PRICE]", note: "A focused tune-up on one part of your game." },
-      { name: "Junior Lesson, 60 min", price: "[PRICE]", note: "For players ages [#]–17. Parents welcome to watch." },
-      { name: "Lesson Package, 5 × 60 min", price: "[PRICE]", note: "Save [PLACEHOLDER: amount] versus single lessons." },
-      { name: "Playing Lesson", price: "[PRICE]", note: "On-course coaching: strategy, decisions and scoring. [PLACEHOLDER: course / holes]" }
+    lessonsAdult: [
+      { name: "Swing Lesson, 60 min", price: "$200", note: "One-on-one with Kevin." },
+      { name: "Putting Lesson, 60 min", price: "$250", note: "On the TourPutt green." },
+      { name: "10-Lesson Package", price: "$1,800", note: "Ten one-hour lessons. Save $200 compared with single swing lessons." }
+    ],
+    lessonsJunior: [
+      { name: "Junior Swing Lesson, 60 min", price: "$150", note: "For golfers under 18." },
+      { name: "Junior Swing Lesson, 30 min", price: "$80", note: "For golfers under 18." },
+      { name: "Junior Putting Lesson", price: "$200", note: "On the TourPutt green." }
     ],
     putting: [
-      { name: "TourPutt Pattern Test", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 30 min]. Full read, start-line and speed report." },
-      { name: "Putting Lesson, 60 min", price: "[PRICE]", note: "Coaching with Kevin on the TourPutt green." }
+      { name: "TourPutt Pattern Test", price: "[PRICE]", note: "36 putts from 3, 5 and 7 feet, all the way around the hole." },
+      { name: "Putting Lesson, 60 min", price: "$250", note: "Coaching with Kevin on the TourPutt green." },
+      { name: "Junior Putting Lesson", price: "$200", note: "For golfers under 18." }
     ],
     fitting: [
-      { name: "Full Bag Fitting", price: "[PRICE]", note: "Driver through putter. [PLACEHOLDER: length, e.g. 2.5 hrs]" },
-      { name: "Driver & Woods Fitting", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 60 min]" },
-      { name: "Iron Fitting", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 60 min]" },
-      { name: "Wedge Fitting", price: "[PRICE]", note: "[PLACEHOLDER: length, e.g. 45 min]" },
-      { name: "Putter Fitting", price: "[PRICE]", note: "Fit on the TourPutt green. [PLACEHOLDER: length]" }
-    ],
-    openPractice: [
-      { name: "TourPutt Green Drop-In", price: "[PRICE]", note: "Per [PLACEHOLDER: hour / session]" },
-      { name: "Impact Vision Simulator Drop-In", price: "[PRICE]", note: "Per [PLACEHOLDER: hour / session]" }
+      { name: "Full Bag Fitting", price: "$200", note: "Includes a $100 credit toward clubs purchased through K2." },
+      { name: "Iron Fitting", price: "$100", note: "Includes a $50 credit toward clubs purchased through K2." },
+      { name: "Driver & Woods Fitting", price: "$100", note: "Includes a $50 credit toward clubs purchased through K2." },
+      { name: "Putter Fitting: Scotty Cameron or L.A.B. Golf", price: "$200", note: "Includes a $100 credit toward a new Scotty Cameron or L.A.B. Golf putter purchased through K2." }
     ]
   },
 
   // Membership plans (shown on the homepage and Memberships page)
   memberships: [
     {
-      name: "Practice",
-      price: "[PRICE]",
+      name: "Practice Membership",
+      price: "$200",
       period: "/month",
-      tagline: "Unlimited reps on your schedule.",
+      tagline: "Daily practice time in our hitting bays.",
       features: [
-        "Open practice on the TourPutt green",
-        "Impact Vision simulator access",
-        "[PLACEHOLDER: hours / visits included]",
-        "Member pricing on lessons"
+        "One hour of practice per day in the hitting bays",
+        "Practice on your schedule, first come, first served",
+        "Climate-controlled, year-round practice"
       ],
       featured: false
     },
     {
-      name: "Improve",
+      name: "Full Studio Membership",
       price: "[PRICE]",
       period: "/month",
-      tagline: "Coaching plus practice. Our most popular plan.",
+      tagline: "Complete access to everything K2 offers.",
+      badge: "Full Access",
       features: [
-        "[#] private lessons with Kevin per month",
-        "Everything in Practice",
-        "TourPutt Pattern Test + putting plan",
-        "Progress tracking with TrackMan"
+        "Full access to the studio, including the TourPutt putting green",
+        "Member pricing on clubs, balls, gloves and more",
+        "Complimentary fittings when you purchase new clubs",
+        "Demo clubs from Titleist, Honma and Miura"
       ],
       featured: true
-    },
-    {
-      name: "Compete",
-      price: "[PRICE]",
-      period: "/month",
-      tagline: "For juniors and competitive players.",
-      features: [
-        "[#] private lessons with Kevin per month",
-        "Everything in Improve",
-        "Tournament prep + course strategy",
-        "[PLACEHOLDER: additional perk]"
-      ],
-      featured: false
     }
   ]
 };
