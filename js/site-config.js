@@ -89,12 +89,13 @@ window.K2_CONFIG = {
     },
     {
       name: "Full Studio Membership",
-      price: "[PRICE]",
+      price: "$600",
       period: "/month",
       tagline: "Complete access to everything K2 offers.",
       badge: "Full Access",
       features: [
         "Full access to the studio, including the TourPutt putting green",
+        "One hour of practice per day",
         "Member pricing on clubs, balls, gloves and more",
         "Complimentary fittings when you purchase new clubs",
         "Demo clubs from Titleist, Honma and Miura"
