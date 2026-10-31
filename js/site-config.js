@@ -32,12 +32,12 @@ window.K2_CONFIG = {
 
   // Hours shown on the site (any wording you like)
   hours: [
-    { days: "Monday – Friday", time: "[HOURS]" },
-    { days: "Saturday", time: "[HOURS]" },
-    { days: "Sunday", time: "[HOURS]" }
+    { days: "Monday – Friday", time: "9 AM – 7 PM" },
+    { days: "Saturday", time: "10 AM – 4 PM" },
+    { days: "Sunday", time: "By appointment" }
   ],
   // Same hours in Google's format, for search results. Example: "Mo-Fr 09:00-19:00", "Sa 08:00-16:00"
-  hoursForGoogle: [],
+  hoursForGoogle: ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
 
   // Link to your Google reviews page
   googleReviewsLink: "[GOOGLE_REVIEWS_LINK]",
