@@ -123,6 +123,31 @@
   s.textContent = JSON.stringify(schema);
   document.head.appendChild(s);
 
+  // Newsletter signup -> Google Sheet (see google-sheets/README.md)
+  if (!isPlaceholder(C.newsletterSheetUrl)) {
+    document.querySelectorAll('form[name="newsletter"]').forEach(function (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var bot = form.querySelector('[name="bot-field"]');
+        if (bot && bot.value) return; // spam bot filled the hidden field
+        var btn = form.querySelector('button[type="submit"]');
+        var note = form.querySelector("small");
+        var email = form.querySelector('[name="email"]').value.trim();
+        if (btn) { btn.disabled = true; btn.textContent = "Signing up…"; }
+        fetch(C.newsletterSheetUrl, {
+          method: "POST",
+          mode: "no-cors",
+          body: new URLSearchParams({ email: email, page: location.pathname })
+        }).then(function () {
+          location.href = "subscribed.html";
+        }).catch(function () {
+          if (btn) { btn.disabled = false; btn.textContent = "Sign Up"; }
+          if (note) note.textContent = "Something went wrong. Please try again, or call us.";
+        });
+      });
+    });
+  }
+
   // Mobile menu
   var toggle = document.querySelector(".nav-toggle");
   var header = document.querySelector(".site-header");

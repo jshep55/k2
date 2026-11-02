@@ -13,6 +13,7 @@ Anything in `[BRACKETS]` is a placeholder. To find what's left, search the proje
 | Phone, email, hours, socials, all prices (lessons, putting, fitting, memberships) | `js/site-config.js` |
 | Page text, reviews, bio | each page's `.html` file |
 | Colors and fonts | top of `css/styles.css` (`:root`) |
+| Newsletter signups (Google Sheet) | `newsletterSheetUrl` in `js/site-config.js`. Setup steps in `google-sheets/README.md` |
 | Photos | put files in `images/`, then swap each `photo-ph` placeholder for an `<img>` (there's an example in the HTML comments) |
 
 ## Pages
@@ -23,5 +24,5 @@ Anything in `[BRACKETS]` is a placeholder. To find what's left, search the proje
 - Local business schema (JSON-LD) is built from `site-config.js`. Once you fill in `siteUrl`, `email`, `hoursForGoogle` and the social links, they're added to the schema automatically.
 
 ## Hosting
-- **Netlify:** drag the folder into Netlify (or connect this repo). Leave the build command blank and set the publish directory to `/`. The email signup form works through Netlify Forms automatically.
-- **GitHub Pages:** go to Settings → Pages, then deploy from this branch at the root. Netlify Forms won't work on GitHub Pages, so point the signup form's `action` at Mailchimp or a similar service.
+- **Netlify:** drag the folder into Netlify (or connect this repo). Leave the build command blank and set the publish directory to `/`. The newsletter signup form in the footer saves to a Google Sheet once `newsletterSheetUrl` is set (see `google-sheets/README.md`). Until then it falls back to Netlify Forms.
+- **GitHub Pages:** go to Settings → Pages, then deploy from this branch at the root. Netlify Forms won't work on GitHub Pages. The newsletter form still works through the Google Sheet, but the contact form needs a service like Formspree.

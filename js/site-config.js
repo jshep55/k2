@@ -39,6 +39,11 @@ window.K2_CONFIG = {
   // Same hours in Google's format, for search results. Example: "Mo-Fr 09:00-19:00", "Sa 08:00-16:00"
   hoursForGoogle: ["Mo-Fr 09:00-19:00", "Sa 10:00-16:00"],
 
+  // Newsletter signups go to a Google Sheet. Paste your Google Apps Script
+  // "Web app" URL here (it ends in /exec). Setup steps: google-sheets/README.md
+  // While this is still a placeholder, the form falls back to Netlify Forms.
+  newsletterSheetUrl: "[NEWSLETTER_SHEET_URL]",
+
   // Link to your Google reviews page
   googleReviewsLink: "[GOOGLE_REVIEWS_LINK]",
 
