@@ -35,7 +35,13 @@
   });
   document.querySelectorAll("[data-k2-href]").forEach(function (el) {
     var v = links[el.getAttribute("data-k2-href")];
-    if (v != null) el.setAttribute("href", v);
+    if (v == null) return;
+    if (isPlaceholder(v)) { el.hidden = true; return; } // hide links that aren't filled in yet
+    el.setAttribute("href", v);
+  });
+  // Hide the social icon row if none of the links are filled in
+  document.querySelectorAll(".social").forEach(function (el) {
+    if (!el.querySelector("a:not([hidden])")) el.hidden = true;
   });
 
   // Hours lists

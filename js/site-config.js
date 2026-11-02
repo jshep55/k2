@@ -15,7 +15,7 @@ window.K2_CONFIG = {
   coachTitle: "PGA Professional",
 
   // Website address once live, e.g. "https://k2golfstudio.com" (no trailing slash)
-  siteUrl: "[SITE_URL]",
+  siteUrl: "https://k2golfstudio.com",
 
   phone: "657-255-4036",          // shown on the site
   phoneDial: "+16572554036",      // used for tap-to-call links
