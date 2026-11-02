@@ -42,7 +42,7 @@ window.K2_CONFIG = {
   // Newsletter signups go to a Google Sheet. Paste your Google Apps Script
   // "Web app" URL here (it ends in /exec). Setup steps: google-sheets/README.md
   // While this is still a placeholder, the form falls back to Netlify Forms.
-  newsletterSheetUrl: "https://script.google.com/macros/s/AKfycbxuphvLv4KSWb5mmX9l2WNgP8TAQgqsT_c9musE70toxbOK9xRghi1k6lyhIwDhnhBr/exec",
+  newsletterSheetUrl: "https://script.google.com/macros/s/AKfycbyyWUao53-9eGK4DD0bhUwv3ey_3DT7DtZkDnwSOHDAikTtabzBzI0g2le2wN20R1KG/exec",
 
   // Link to your Google reviews page
   googleReviewsLink: "[GOOGLE_REVIEWS_LINK]",
