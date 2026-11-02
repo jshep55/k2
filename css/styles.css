@@ -349,20 +349,6 @@ p { margin: 0 0 1em; }
 .reviews-cta { text-align: center; margin-top: 36px; }
 
 /* ---------- Newsletter ---------- */
-.signup {
-  display: grid; gap: 28px; align-items: center;
-  background: var(--graphite);
-  color: var(--white);
-  border-radius: calc(var(--radius) * 1.5);
-  padding: 44px 26px;
-  position: relative; overflow: hidden;
-}
-.signup::after {
-  content: ""; position: absolute; right: -80px; top: -80px; width: 260px; height: 260px;
-  border-radius: 50%; border: 40px solid rgba(201,165,92,.12); pointer-events: none;
-}
-.signup h2 { margin-bottom: 10px; }
-.signup p { color: rgba(255,255,255,.78); margin: 0; }
 .signup-form { display: flex; flex-direction: column; gap: 10px; position: relative; z-index: 1; }
 .signup-form input {
   min-height: 52px; padding: 0 18px;
@@ -374,7 +360,6 @@ p { margin: 0 0 1em; }
 .signup-form input:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
 .signup-form small { color: rgba(255,255,255,.6); font-size: .8rem; padding-left: 6px; }
 @media (min-width: 860px) {
-  .signup { grid-template-columns: 1fr 1fr; padding: 60px 56px; gap: 48px; }
   .signup-form { flex-direction: row; flex-wrap: wrap; }
   .signup-form input { flex: 1; }
   .signup-form small { flex-basis: 100%; }
@@ -389,6 +374,15 @@ p { margin: 0 0 1em; }
 /* ---------- Footer ---------- */
 .site-footer { background: var(--black); color: rgba(255,255,255,.78); font-size: .95rem; padding: 64px 0 110px; }
 .footer-grid { display: grid; gap: 40px; }
+.footer-signup {
+  display: grid; gap: 20px; align-items: center;
+  padding-bottom: 44px; margin-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.footer-signup h4 { margin-bottom: 8px; }
+.footer-signup p { margin: 0; max-width: 32em; }
+@media (min-width: 900px) {
+  .footer-signup { grid-template-columns: 1fr 1.1fr; gap: 48px; }
+}
 @media (min-width: 900px) {
   .footer-grid { grid-template-columns: 1.1fr .8fr .9fr 1.4fr; gap: 40px; }
   .site-footer { padding-bottom: 40px; }
