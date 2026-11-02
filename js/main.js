@@ -123,8 +123,8 @@
   s.textContent = JSON.stringify(schema);
   document.head.appendChild(s);
 
-  // Newsletter signup -> Google Sheet (see google-sheets/README.md)
-  if (!isPlaceholder(C.newsletterSheetUrl)) {
+  // Newsletter signup -> Google Form -> Google Sheet (see README.md)
+  if (!isPlaceholder(C.newsletterFormUrl)) {
     document.querySelectorAll('form[name="newsletter"]').forEach(function (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -134,11 +134,9 @@
         var note = form.querySelector("small");
         var email = form.querySelector('[name="email"]').value.trim();
         if (btn) { btn.disabled = true; btn.textContent = "Signing up…"; }
-        fetch(C.newsletterSheetUrl, {
-          method: "POST",
-          mode: "no-cors",
-          body: new URLSearchParams({ email: email, page: location.pathname })
-        }).then(function () {
+        var data = new URLSearchParams();
+        data.append(C.newsletterFormField, email);
+        fetch(C.newsletterFormUrl, { method: "POST", mode: "no-cors", body: data }).then(function () {
           location.href = "subscribed.html";
         }).catch(function () {
           if (btn) { btn.disabled = false; btn.textContent = "Sign Up"; }
